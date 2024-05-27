@@ -7,6 +7,7 @@ import '@/styles/globals.css';
 import '@/styles/colors.css';
 
 import {siteConfig} from '@/constant/config';
+import {Trace} from "@/components/trace/trace";
 
 // !STARTERCONF Change these default meta
 // !STARTERCONF Look at @/constant/config to change them
@@ -59,6 +60,7 @@ export default function RootLayout({
 }) {
     return (
         <html>
+        <Trace/>
         <body>
         <I18nProviderClient locale={locale}>
         {children}
