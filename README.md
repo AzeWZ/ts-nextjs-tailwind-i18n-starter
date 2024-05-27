@@ -33,6 +33,7 @@ This repository is 🔋 battery packed with:
 - 👀 Open Graph Helper Function — Awesome open graph generated using [og](https://github.com/theodorusclarence/og), fork it and deploy!
 - 🗺 Site Map — Automatically generate sitemap.xml
 - 📦 Expansion Pack — Easily install common libraries, additional components, and configs.
+- 🌐 I18n - [next-international](https://github.com/QuiiBz/next-international)  
 
 See the 👉 [feature details and changelog](https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/blob/main/CHANGELOG.md) 👈 for more.
 
@@ -58,7 +59,7 @@ You can also check all of the **details and demos** on my blog post:
    pnpm create next-app  -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter ts-pnpm
    ```
 
-   If you still want to use **pages directory** (_is not actively maintained_) you can use this command
+   If you still want to use **pages directory** (_is not actively ed_) you can use this command
 
    ```bash
    npx create-next-app -e https://github.com/theodorusclarence/ts-nextjs-tailwind-starter/tree/pages-directory project-name
