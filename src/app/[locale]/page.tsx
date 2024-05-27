@@ -1,5 +1,6 @@
 'use client';
 
+import { useI18n, useScopedI18n } from '../../locales/client'
 import Head from 'next/head';
 import * as React from 'react';
 import '@/lib/env';
@@ -23,14 +24,19 @@ import Logo from '~/svg/Logo.svg';
 // to customize the default configuration.
 
 export default function HomePage() {
+  const t = useI18n()
+  const scopedT = useScopedI18n('hello')
   return (
     <main>
       <Head>
         <title>Hi</title>
+
       </Head>
       <section className='bg-white'>
         <div className='layout relative flex min-h-screen flex-col items-center justify-center py-12 text-center'>
-          <Logo className='w-16' />
+          <Logo className='w-16'/>
+          <p>{scopedT('world')}</p>
+          <p>{t('hello.world')}</p>
           <h1 className='mt-4'>Next.js + Tailwind CSS + TypeScript Starter</h1>
           <p className='mt-2 text-sm text-gray-800'>
             A starter for Next.js, Tailwind CSS, and TypeScript with Absolute
@@ -47,15 +53,15 @@ export default function HomePage() {
           </ButtonLink>
 
           <UnstyledLink
-            href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
-            className='mt-4'
+              href='https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Ftheodorusclarence%2Fts-nextjs-tailwind-starter'
+              className='mt-4'
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              width='92'
-              height='32'
-              src='https://vercel.com/button'
-              alt='Deploy with Vercel'
+                width='92'
+                height='32'
+                src='https://vercel.com/button'
+                alt='Deploy with Vercel'
             />
           </UnstyledLink>
 
